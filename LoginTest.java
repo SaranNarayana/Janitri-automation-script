@@ -28,6 +28,7 @@ public class LoginTest extends BaseTest {
         driver.get("https://dev-dash.janitri.in/");
         loginPage = new LoginPage(driver);
     }
+    
     @Test
     //Calling the methods
     void Login(){
@@ -67,6 +68,7 @@ public class LoginTest extends BaseTest {
 
         Assert.assertTrue(loginPage.errorMessageISDisplayed(),"Error Message is displayed");
     }
+    
     @Test(priority = 4)
     //Validate whether page elements present or not
     void testPageElementsPresent(){
