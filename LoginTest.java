@@ -40,7 +40,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test(priority = 1)
-    //Validating the login button
+    //Validate login button
     void testLoginButtonDisabledWhenFieldSAreEmpty() throws InterruptedException {
         loginPage.setUsername(" ");
         loginPage.setPassword(" ");
@@ -49,7 +49,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test(priority = 2)
-    //Validating the masked eye icon
+    //Validate masked eye icon
     void testPasswordMaskedbutton(){
         loginPage.setPassword("Password123");
         Assert.assertEquals(loginPage.getPasswordFieldType(),"password");
@@ -59,7 +59,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test(priority = 3)
-    //Validating whether error message is visible or not visible
+    //Validate whether error message is visible or not visible
     void testInvalidLoginErrMsg(){
         loginPage.setUsername("InavlidCredentials@test.com");
         loginPage.setPassword("WrongPassword");
@@ -68,7 +68,7 @@ public class LoginTest extends BaseTest {
         Assert.assertTrue(loginPage.errorMessageISDisplayed(),"Error Message is displayed");
     }
     @Test(priority = 4)
-    //Validating whether page elements present or not
+    //Validate whether page elements present or not
     void testPageElementsPresent(){
         Assert.assertTrue(loginPage.isTitleCorrect(),"Page title is incorrect");
         Assert.assertTrue(loginPage.isUserNameFieldPresent(),"UserName field is not visible");
