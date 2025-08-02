@@ -34,11 +34,11 @@ public class LoginPage {
         password.clear();
         password.sendKeys(pwd);
     }
-    //Click on the login button
+    //Click login button
     public void ClickLogin() {
         driver.findElement(btn_login).click();
     }
-    //click on the eye icon
+    //click eye icon
     public void setBtn_eyeIcon(){
         driver.findElement(btn_eyeIcon);
     }
@@ -46,15 +46,15 @@ public class LoginPage {
     public boolean loginButtonIsEnabled(){
         return driver.findElement(btn_login).isEnabled();
     }
-    //Check the data visibility entered into password field
+    //Check data visibility entered into password field
     public String getPasswordFieldType(){
         return driver.findElement(txt_password).getAttribute("type");
     }
-    //Check the toggle password visibility
+    //Check toggle password visibility
     public void togglePasswordVisibility(){
         driver.findElement(btn_eyeIcon).click();
     }
-    //Check the error message visibilty
+    //Check error message visibilty
     public boolean errorMessageISDisplayed(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             WebElement errorElement = wait.until(ExpectedConditions.visibilityOfElementLocated(errorMsg));
@@ -65,11 +65,11 @@ public class LoginPage {
         String expTitle = "Janitri";
         return driver.getTitle().equals(expTitle);
     }
-    //Check whether the username field is present or not
+    //Check whether username field is present or not
     public boolean isUserNameFieldPresent(){
         return driver.findElement(txt_username).isDisplayed();
     }
-    //Check whether the password field is present or not
+    //Check whether password field is present or not
     public boolean isPasswordFieldPresent(){
         return driver.findElement(txt_password).isDisplayed();
     }
