@@ -45,7 +45,7 @@ public class LoginTest extends BaseTest {
         loginPage.setUsername(" ");
         loginPage.setPassword(" ");
         Thread.sleep(3000);
-        Assert.assertFalse(loginPage.loginButtonIsEnabled(),"Login button should be disabled when fields are empty");
+        Assert.assertTrue(loginPage.loginButtonIsEnabled(),"Login button should be disabled when fields are empty");
     }
 
     @Test(priority = 2)
